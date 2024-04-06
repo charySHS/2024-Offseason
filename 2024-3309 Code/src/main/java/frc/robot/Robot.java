@@ -14,5 +14,18 @@ import org.littletonrobotics.junction.wpilog.WPILOGWriter;
 
 public class Robot extends LoggedRobot
 {
-    public static final 
+    private Command AutonomousCommand;
+    private RobotContainer RobotContainer;
+
+    @Override
+    public void robotInit() {
+        RobotContainer = new RobotContainer();
+        if (Constants.kEnableOBlog) {
+            io.github.oblarg.oblog.Logger.configureLoggingAndConfig(RobotContainer, false);
+        } else {
+            System.out.println("OBlog is disabled -- not configuring logging and config.");
+        }
+
+        Logger.recordMetadata("ProjectName", BuildConstants.);
+    }
 }

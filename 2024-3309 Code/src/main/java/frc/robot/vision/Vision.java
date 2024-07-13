@@ -1,7 +1,4 @@
-﻿package frc.robot.Vision;
-
-import com.sun.source.tree.IfTree;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+﻿package frc.robot.vision;
 
 import java.util.Set;
 public class Vision

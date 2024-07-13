@@ -1,4 +1,4 @@
-﻿package frc.robot.Vision;
+﻿package frc.robot.vision;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -7,7 +7,7 @@ import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
 
-import frc.robot.Vision.LimelightHelpers.LimelightResults;
+import frc.robot.vision.LimelightHelpers.LimelightResults;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -23,7 +23,7 @@ public class Limelight {
     static boolean profileJSON = false;
 
     static final String sanitizeName(String name) {
-        if (name.equals("") || name == null) {
+        if (name.isEmpty()) {
             return "limelight";
         }
         return name;
